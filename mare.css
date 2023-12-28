@@ -1,0 +1,96 @@
+*{
+    font-family: monospace , Courier, monospace;
+    overflow: hidden;
+}
+body{
+    margin: 0;
+}
+#background{
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    width: 100dvw;
+    justify-content: center;
+    align-items: center;
+    background: url(roblox.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#title{
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #0011ff, #32e0ff);
+    text-align: center;
+    font-size: 20dvh;
+    transform: translateY(-15dvh);
+    animation: fadedown 1s 1 forwards;
+    height: 30dvh;
+}
+#bobuximg{
+    width: 10dvw;
+}
+#robux{
+    width: 100dvw;
+    height:20dvh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-15dvh);
+    animation: fade 1.5s 1 forwards;
+}
+#bobux{
+    font-size: 20dvh;
+    animation: fade 1.5s 1 forwards;
+}
+.button{
+    width: 10dvw;
+    margin: 10px;
+    background-color: rgba(30, 75, 223, 0.842);
+    font-size: 1.5em;
+    border-radius: 100px;
+    border: 1px solid whitesmoke;
+    padding: 1vh 1vw;
+    transition: padding 0.2s ease-in-out , background-color 0.2s ease-in-out;
+    animation: fade 1.5s 1 forwards;
+}
+.button:hover {
+    background-color: rgba(15, 36, 105, 0.842);
+    padding: 1.5vh 2vw;
+}
+#buttoncontainer{
+    width: 50dvw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-10dvh);
+}
+#take{
+    font-size: 2.5em;
+    width: 25dvh;
+    transform: translateY(-5dvh);
+}
+@media (max-width: 777px) {
+    #title{
+        font-size: 10dvh;
+        height: 15dvh;
+    }
+    #bobux{
+        font-size: 8dvh;
+    }
+    .button{
+        width: 12dvw;
+    }
+}
+@keyframes fadedown {
+    0%{opacity: 0;
+        transform: translateY(-30dvh);}
+    100%{opacity:1;
+        transform: translateY(-15dvh);}
+}
+@keyframes fade {
+    0%{opacity: 0;}
+    100%{opacity:1;}
+}

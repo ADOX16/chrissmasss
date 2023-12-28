@@ -1,0 +1,102 @@
+*{
+    font-family: monospace, Courier, monospace;
+    overflow: hidden;
+    text-decoration: none;
+}
+body{
+    margin: 0;
+}
+#background{
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    width: 100dvw;
+    justify-content: center;
+    align-items: center;
+    background: url(y_room.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#photo{
+    display: flex;
+    flex-direction: row;
+}
+#girl{
+    height: 60dvh;
+    animation: faderight 3s 1 forwards;
+}
+#textbox{
+    height: 20dvh;
+    visibility: hidden;
+}
+#catfuck{
+    display: none;
+    animation: stretchh 1s infinite ;
+}
+.button{
+    visibility: hidden;
+    width: 10dvw;
+    margin: 10px;
+    background-color: rgba(223, 59, 30, 0.712);
+    font-size: 1.5em;
+    border-radius: 100px;
+    border: 1px solid whitesmoke;
+    padding: 1vh 1vw;
+    transition: padding 0.2s ease-in-out , background-color 0.2s ease-in-out;
+    animation: fade 1.5s 1 forwards;
+}
+.button:hover {
+    background-color: rgba(197, 13, 13, 0.842);
+    padding: 1.5vh 2vw;
+}
+#text{
+    transform: translate(2vw, -20vh);
+    height: 10dvh;
+    width: 10dvw;
+    visibility: hidden;
+}
+@keyframes fade {
+    0%{opacity: 0;}
+    100%{opacity:1;}
+}
+@keyframes faderight {
+    0%{opacity: 0;
+        transform: translateX(-15dvh);}
+    100%{opacity:1;
+        transform: translateX(-0dvh);}
+}
+@keyframes type {
+    from{width: 0;}
+}
+@keyframes stretchh{
+    0%{
+     transform: scaleY(1);
+    } 
+    50%{
+     transform: scaleY(1.08);
+    } 
+    60%{
+     transform: scaleY(1.08);
+    }
+    100%{
+     transform: scaleY(1);
+    } 
+ }
+@media (max-width: 777px) {
+    .button{
+        width: 25dvw;
+    }
+    #text{
+        transform: translate(9dvw, -17dvh);
+        height: 12dvh;
+        width: 25dvw;
+    }
+}
+@media (max-width: 800px) {
+    #text{
+        transform: translate(4dvw, -22dvh);
+        height: 12dvh;
+        width: 22dvw;
+    }
+}

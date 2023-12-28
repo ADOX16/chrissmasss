@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrismas gifts</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: black;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            overflow: hidden;
+        }
+        #qr{
+            width: 30dvw;
+            transform: translateY(20dvh);
+        }
+        #main{
+            display: none;
+        }
+        @media (max-width:777px) {
+            #qr{
+            width: 40dvw;
+            transform: translateY(35dvh);
+          }
+        }
+    </style>
+    <div id="1">
+        <div id="2">
+            <img id="main" src="icon.png">
+            <img id="qr" src="frame.png">
+        </div>
+    </div>
+    <script>
+        const img = document.getElementById('qr');
+        img.onload = function() {
+            setTimeout(() => {
+                window.location.href = 'chrismas.html';
+            }, 200);
+        };
+    </script>
+</body>
+</html>
